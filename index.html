@@ -5,22 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/aos.css" />
     <title>Responsive</title>
+
+    <script src="js/smooth-scroll.min.js"></script>
+    <script>
+        smoothScroll.init({
+            selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+            selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+            speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+            easing: 'easeInOutCubic', // Easing pattern to use
+            offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+            callback: function (anchor, toggle) { } // Function to run after scrolling      
+        });
+
+
+    </script>
+
     <style>
         body{
             font-family: "Audiowide", sans-serif;            
         }
         .flex-container{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             font-size: 30px;
-            text-align: center;           
+            text-align: center;  
+            height: 3000px;         
         }
         
        
 
         .flex-item-center{
-            
+            /*background-color: green;*/
             color: blue;
             padding: 10px;            
             margin-top: 250px;
@@ -44,12 +62,38 @@
         <div class="flex-item-center">
             <p>!!Enhorabuena!!!</p>
             <p>Has llegado a la prueba final</p>
-            <p>Tu codigo : <strong>14</strong></p>
-            
+            <p>Ya estas cerca....</p>
+            <a data-scroll href="#pos1"><i class="fa fa-angle-double-down" style="font-size:48px;color:red"></i></a>   
         </div>        
 
-        
+
+        <div class="flex-item-center" style="margin-top:500px" id="pos1">           
+            <p>Mas cerca....</p>            
+            <a data-scroll href="#pos2"><i class="fa fa-angle-double-down" style="font-size:48px;color:red"></i></a>   
+        </div> 
+
+        <div class="flex-item-center" style="margin-top:1000px" id="pos2">           
+            <p>Mucho mas cerca....</p>            
+            <a data-scroll href="#pos3"><i class="fa fa-angle-double-down" style="font-size:48px;color:red"></i></a>   
+        </div> 
+
+        <div class="flex-item-center" style="margin-top:1500px" id="pos3">           
+            <p>Que te quemas!!!!</p>            
+            <a data-scroll href="#pos4"><i class="fa fa-angle-double-down" style="font-size:48px;color:red"></i></a>   
+        </div> 
+
+        <div class="flex-item-center" style="margin-top:2000px" id="pos4">           
+            <p>Aqui esta vuestro tesoro!!!!</p>            
+            <img src="./rey_leon.jpg" alt="Simba" style="width:75%;">
+        </div> 
+
     </div>
 
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
 </body>
 </html>
